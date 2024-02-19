@@ -1,6 +1,6 @@
-# which_runtime
+# which-runtime
 
-[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/which_runtime/mod.ts)
+[![documentation](https://doc.deno.land/badge.svg)](https://jsr.io/@david/which-runtime)
 
 Deno module for checking which runtime the code is running in.
 
@@ -9,7 +9,7 @@ This may be useful in some extreme scenarios when using
 instead.
 
 ```ts
-import { isDeno, isNode } from "https://deno.land/x/which_runtime/mod.ts";
+import { isDeno, isNode } from "jsr:@david/which-runtime@0.2";
 
 if (isNode) {
   // do something

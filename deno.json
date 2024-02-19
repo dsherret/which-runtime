@@ -1,0 +1,5 @@
+{
+  "name": "@david/which-runtime",
+  "version": "0.2.0",
+  "exports": "./mod.ts"
+}
