@@ -10,7 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: canary
       - name: Run tests
         run: deno test
 
@@ -33,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
           deno-version: canary
       - name: Publish to JSR on tag
