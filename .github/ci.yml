@@ -24,5 +24,17 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: npm build
         run: deno task build:npm ${{steps.get_tag_version.outputs.TAG_VERSION}}
-      - name: jsr publish
+
+  jsr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: canary
+      - name: Publish to JSR on tag
         run: deno run -A jsr:@david/publish-on-tag@0.1.3
