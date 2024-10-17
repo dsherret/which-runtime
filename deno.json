@@ -8,6 +8,13 @@
   "tasks": {
     "test:node": "deno run -A scripts/test-node.ts"
   },
+  "publish": {
+    "exclude": [
+      ".github",
+      "scripts",
+      "*.test.ts"
+    ]
+  },
   "exclude": [
     "npm"
   ]
