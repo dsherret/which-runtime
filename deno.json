@@ -1,5 +1,14 @@
 {
   "name": "@david/which-runtime",
-  "version": "0.2.0",
-  "exports": "./mod.ts"
+  "version": "0.2.1",
+  "exports": "./mod.ts",
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
+  },
+  "tasks": {
+    "test:node": "deno run -A scripts/test-node.ts"
+  },
+  "exclude": [
+    "npm"
+  ]
 }
