@@ -2,7 +2,7 @@ name: CI
 on: push
 jobs:
   test-library:
-    name: Deno test
+    name: Deno 2.x and Node
     permissions:
       contents: read
       id-token: write
@@ -28,7 +28,7 @@ jobs:
         run: deno task test:node
 
   deno-1:
-    name: Deno test
+    name: Deno 1.x
     permissions:
       contents: read
       id-token: write
@@ -40,7 +40,7 @@ jobs:
         with:
           deno-version: 1.x
       - name: Run tests
-        run: deno test --allow-env
+        run: deno test --no-lock --allow-env
 
   jsr:
     runs-on: ubuntu-latest
